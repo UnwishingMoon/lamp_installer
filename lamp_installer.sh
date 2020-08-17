@@ -47,7 +47,7 @@ echo "$PREFIX Installing Apache, Mysql, PHP, PHPMyadmin"
 apt install -yq apache2 mysql-server php libapache2-mod-php php-mysql php-cli php-mbstring phpmyadmin
 
 echo "$PREFIX Setting up Apache.."
-a2enmod rewrite headers ssl
+a2enmod rewrite headers ssl expires
 a2dismod status
 a2disconf charset javascript-common other-vhosts-access-log serve-cgi-bin localized-error-pages
 rm /etc/apache2/sites-available/*
