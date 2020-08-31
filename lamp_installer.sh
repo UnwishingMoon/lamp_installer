@@ -62,7 +62,7 @@ echo '<VirtualHost *:80>
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 
     <Directory /var/www/>
-        Options None -Indexes +FollowSymLinks +SymLinksIfOwnerMatch
+        Options -Indexes +SymLinksIfOwnerMatch -Includes
         AllowOverride All
     </Directory>
 </VirtualHost>' > /etc/apache2/sites-available/000-default.conf
