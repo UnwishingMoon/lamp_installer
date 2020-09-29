@@ -1,10 +1,17 @@
-# database_creator
-Creates the database automatically ans prints the password after
+# lamp_installer
+Automatic LAMP installer for Debian/Ubuntu based distribution
 
-At the end of the script it will prompt the generated **password** for the **Database**
+It will install these services:
+- Apache2
+- Mysql
+- PHP
+- PHPMyAdmin
+
+It will also secure Mysql ready for production
 
 ```
-Usage: filename dbName
+Usage: filename DBRootPassword PHPMyAdminUserPassword
 ```
 - **filename** is the name of the file to be executed
-- **dbName** is the Name of the database
+- **DBRootPassword** is the Root password of the database
+- **PHPMyAdminUserPassword** is the password for the phpmyadmin user
