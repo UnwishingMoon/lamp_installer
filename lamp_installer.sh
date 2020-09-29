@@ -71,7 +71,7 @@ phpenmod mbstring
 
 echo "$PREFIX Securing Mysql installation.."
 mysql --user=root <<_EOF_
-UPDATE mysql.user SET Password=PASSWORD('${dbRootPass}') WHERE User='root';
+ALTER USER 'root'@'localhost' IDENTIFIED BY '${dbRootPass}';
 DELETE FROM mysql.user WHERE User='';
 DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1');
 DROP DATABASE IF EXISTS test;
